@@ -8,7 +8,11 @@ pipeline {
         sh 'npm install'
         sh 'npm run build'
         sh 'npm test'
-        stash includes: "public/**", name: "web-public"
+      }
+      post {
+        success {
+          stash includes: "public/**", name: "web-public"
+        }
       }
     }
     stage('publish') {
