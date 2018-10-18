@@ -15,5 +15,10 @@ pipeline {
         archiveArtifacts 'public/**'
       }
     }
+    stage('integration test') {
+      steps {
+        sh 'curl www.google.ca'
+      }
+    }
   }
 }
