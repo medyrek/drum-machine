@@ -25,8 +25,7 @@ pipeline {
     stage('integration test') {
       steps {
         sh 'curl www.google.ca'
-      }
-      step([$class: 'hudson.plugins.chucknorris.CordellWalkerRecorder']) {
+        chucknorris()
       }
     }
   }
