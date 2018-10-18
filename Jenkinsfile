@@ -24,7 +24,7 @@ pipeline {
     }
     stage('integration test') {
       steps {
-        sh 'curl spark-01-vm04.canadacentral.cloudapp.azure.com:8081'
+        sh 'curl localhost:8081'
       }
     }
   }
