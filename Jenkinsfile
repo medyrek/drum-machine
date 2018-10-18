@@ -24,8 +24,7 @@ pipeline {
     }
     stage('integration test') {
       steps {
-        sh 'curl www.google.ca'
-        chucknorris()
+        sh 'curl spark-01-vm04.canadacentral.cloudapp.azure.com:8081'
       }
     }
   }
