@@ -2,7 +2,7 @@ pipeline {
   agent any
   
   stages {
-    stage('deploy') {
+    stage('build') {
       steps {
         sh 'npm config ls'
         echo 'installing npm...'
